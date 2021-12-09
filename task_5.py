@@ -6,4 +6,4 @@ if a % c == 0 and a != 0:
 elif a == 0:
   print(a // c, 'делитель равен нулю')
 else: 
-  print( a % c, 'не делится')
+  print( a % c, 'не делится')  
