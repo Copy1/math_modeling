@@ -17,4 +17,3 @@ for i in range(N):
   coords[i, 2] = y[i]
   print(coords)
   
-
