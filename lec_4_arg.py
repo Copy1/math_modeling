@@ -23,6 +23,3 @@ def my_func(**kwrgs):
 
 print(my_func(obj_1=3, obj_2=4))
 print(my_func(obj_1=3, obj_2=4, obj_3=8))
-5
-5
-Аргументы
