@@ -18,7 +18,7 @@
 # L = [1, 7, 9, 90]
 # arf_funk(L)
 
-def xyi_funk(L):
+def zoi_funk(L):
   
   S = 0
   for i in range(len(L)):
@@ -27,5 +27,5 @@ def xyi_funk(L):
 
 
 L = [1, 7, 9, 90]
-print(xyi_funk(L))
+print(zoi_funk(L))
 
