@@ -23,3 +23,5 @@ b = average(arr)
 print(arr)
 print(b)
 
+L = [1, 7, 9, 90]
+arf_funk(L)
