@@ -18,7 +18,7 @@
 # L = [1, 7, 9, 90]
 # arf_funk(L)
 
-def zoi_funk(L):
+def zoi_funс(L):
   
   S = 0
   for i in range(len(L)):
@@ -27,7 +27,7 @@ def zoi_funk(L):
 
 
 L = [1, 7, 9, 90]
-print(zoi_funk(L))
+print(zoi_funс(L))
 
  
 
