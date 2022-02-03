@@ -29,3 +29,9 @@ def zoi_funk(L):
 L = [1, 7, 9, 90]
 print(zoi_funk(L))
 
+ 
+
+
+
+
+ 
