@@ -13,7 +13,9 @@ def elips_plotter(radius=5):
     
 elips_plotter()
 
-import matplotlib.pyplot as plt         #эллипс
+
+
+import matplotlib.pyplot as plt         #ок
 import numpy as np
 
 def elips_plotter(radius=5):
@@ -23,8 +25,10 @@ def elips_plotter(radius=5):
     X, Y = np.meshgrid(x, y)
     fxy = X**2 + Y**2
     plt.contour(X, Y, fxy, levels=[radius**2.5])
+    plt.axis('equal')
     plt.show()
+  
     
 elips_plotter()
 
-======================
+
