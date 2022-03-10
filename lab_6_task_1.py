@@ -6,23 +6,5 @@ def lissahy
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-x(t) = A · sin(a · t + δ)
-y(t) = B · sin(b · t)
+#x(t) = A · sin(a · t + δ)
+#y(t) = B · sin(b · t)
