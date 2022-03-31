@@ -24,19 +24,6 @@ ani = FuncAnimation(fig,
                     frames=np.arange(0, 5, 0.01),
                     interval=30
                     )
-de
-
-
-
-
-
-
-
-
-
-
-
-
 
 #plt.show()
 ani.save('lab_7_task_2_animation.gif')
