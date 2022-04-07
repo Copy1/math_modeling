@@ -4,13 +4,13 @@ import numpy as np
 from matplotlib.animation import FuncAnimation
 
 fig, ax = plt.subplots()
-but, = plt.plot([], [], 'o', color='plum')
+but, = plt.plot([], [], '-', color='chartreuse')
 
 xdata, ydata = [], []
 
 def tuz(t):
- x = np.sin(t) * (np.e**np.cos(t)) - 2 * (np.cos(4*t)) - ((np.sin(t/12))**5)
- y = np.cos(t) * (np.e**np.cos(t)) - 2 * (np.cos(4*t)) - ((np.sin(t/12))**5)
+ x = np.sin(t) * (np.e**np.cos(t) - 2 * np.cos(4*t) - np.sin(t/12)**5)
+ y = np.cos(t) * (np.e**np.cos(t) - 2 * np.cos(4*t) - np.sin(t/12)**5)
  return x, y
 
 edge = 10
@@ -31,7 +31,7 @@ def animate(i):
 ani = FuncAnimation(fig,
                    animate,
                    frames = len(coordsx),
-                   interval = 25
+                   interval = 40
                    )
 ani.save ('lab_7_but.gif')
 
@@ -41,4 +41,4 @@ ani.save ('lab_7_but.gif')
 
 
 
-#13 * (np.cos(t)) - 5 * (np.cos(2*t)) - 2 * (np.cos(3*t)) - (np.cos(4*t))
+#13 * (np.cos(t)) - 5 * (np.cos(2*t)) - 2 * (np.cos(3*t)) - (np.cos(4*t))darkviolet

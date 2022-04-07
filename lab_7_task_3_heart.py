@@ -33,5 +33,5 @@ ani = FuncAnimation(fig,
                    frames = len(coordsx),
                    interval = 30
                    )
-ani.save ('lab_7_heart.gif')
+
 

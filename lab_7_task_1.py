@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
+
+ 
 R = 100
 t = np.arange(-2*np.pi, 2*np.pi, 0.1)
 
