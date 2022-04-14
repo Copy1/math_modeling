@@ -17,8 +17,8 @@ def circle_func(R, N):
 
 def astroid_func(R, N, t):
   alpha = np.arange(0, 2*np.pi, 0.1)
-  x = R * np.cos(t) + R * np.cos(alpha)
-  y = R * np.sin(t) + R * np.sin(alpha)
+  x = R/2 * np.cos(t) + R/2 * np.cos(alpha)
+  y = R/2 * np.sin(t) + R/2 * np.sin(alpha)
   return x, y
 
 fig, ax = plt.subplots()
