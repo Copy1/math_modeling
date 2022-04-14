@@ -37,3 +37,5 @@ plt.xlim(0,10)
 plt.ylim(0,3)
 
 ani.save ('cicloude.gif')
+
+#ball2.set_data(cicloude(R = 1, t = 4 * np.pi*i/frames))
