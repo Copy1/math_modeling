@@ -1,7 +1,12 @@
 import random
 import math
-c = 100 + random.randint(0, 900)
-print(c)
-print(list(map(int,str(c))))
-b = list(map(int,str(c)))+(list(map(int,str(c))))
-print(b)
+num = 100 + random.randint(0, 900)
+print('num:', num)
+print()
+s = 0
+for i in f'{num}':
+  print(i)
+  s += int(i)
+
+print()
+print('s:', s)
