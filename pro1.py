@@ -3,65 +3,57 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 import time
 
-print(f'введите х: { }')
-print(f'введите y: { }')
-#x = 0.0
-#y = 0.0
+x0 = input('введите x: ')
+y0 = input('введите y: ')
 fig, ax = plt.subplots()
+#x0 = 6
+#y0 = 8
 
-ball, = plt.plot([], [], 'o', color='black', label='ball')
-ball2, = plt.plot([], [], 'o', color='black', label='ball')
-ball3, = plt.plot([], [], 'o', color='black', label='ball')
-ball4, = plt.plot([], [], 'o', color='black', label='ball')
+ K = float(input('Модуль всестороннего сжатия(Н/м^2): '))
+ p = float(input('Плотность жидкости(кг/м^3): '))
+#K = 5
+#p = 3
+N = 15
 
-plt.plot(x, y, color='black', marker='o')
+c = np.sqrt(K/p)
 
+balls = []
 
-def circle_move(R):
+for i in range(N):
+  ball, = plt.plot([], [], 'o', color='black', label='ball')
+  balls.append(ball)
+
+plt.plot(x0, y0, color='r', marker='o')
+
+def circle_func(R, r):
   alpha = np.arange(0, 2*np.pi, 0.01)
-  x = R * np.cos(alpha)
-  y = R * np.sin(alpha)
-  return x, y
-  
-
-def circle_func(R):
-  alpha = np.arange(0, 2*np.pi, 0.01)
-  x = R * np.cos(alpha)
-  y = R * np.sin(alpha)
+  x = x0 + (R+r) * np.cos(alpha)
+  y = y0 + (R+r) * np.sin(alpha)
   return x, y
 
-def circle_c(R):
-  alpha = np.arange(0, 2*np.pi, 0.01)
-  x = R * np.cos(alpha)
-  y = R * np.sin(alpha)
-  return x, y
-  
-
-def circle(R):
-  alpha = np.arange(0, 2*np.pi, 0.01)
-  x = R * np.cos(alpha)
-  y = R * np.sin(alpha)
-  return x, y
-  
-
-edge = 3
+edge = max(x0, y0)
 plt.axis('equal')
-ax.set_xlim(-edge, edge)
-ax.set_ylim(-edge, edge)
+ax.set_xlim(-2*edge, 2*edge)
+ax.set_ylim(-2*edge, 2*edge)
 
 
 def animate(i):
-  ball.set_data(circle_move(R=i+1))
-  ball2.set_data(circle_func(R=i))
-  ball3.set_data(circle(R=i+0.5))
-  ball4.set_data(circle_c(R=i+1.5))
+  for j in range(N):
+    ball = balls[j]
+    ball.set_data(circle_func(0, j+i))
+  # ball2.set_data(circle_func(i, i))
+  # ball3.set_data(circle_func(i, i+0.5))
+  # ball4.set_data(circle_func(i, i+1.5))
+  # ball5.set_data(circle_func(i, i+2))
 
 
 ani = FuncAnimation(fig,
                     animate,
                     frames=np.arange(0, 5, 0.01),
-                    interval=30
+                    interval = c
                     )
+
+
 
 ani.save('pro1_animation.gif')
 
