@@ -3,17 +3,17 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 import time
 
-x0 = input('введите x: ')
-y0 = input('введите y: ')
+#x0 = input('введите x: ')
+#y0 = input('введите y: ')
 fig, ax = plt.subplots()
-#x0 = 6
-#y0 = 8
+x0 = 6
+y0 = 8
 
-K = float(input('Модуль всестороннего сжатия(Н/м^2): '))
-p = float(input('Плотность жидкости(кг/м^3): '))
-#K = 5
-#p = 3
-N = 10
+#K = float(input('Модуль всестороннего сжатия(Н/м^2): '))
+#p = float(input('Плотность жидкости(кг/м^3): '))
+K = 5
+p = 3
+N = 20
 
 c = np.sqrt(K/p)
 
