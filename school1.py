@@ -1,4 +1,4 @@
-import random
+ import random
 import math
 
 a = random.randint(0, 10)
