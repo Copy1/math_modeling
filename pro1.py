@@ -1,31 +1,30 @@
-import numpy as np
+ import numpy as np
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
-import time
 
-#x0 = input('введите x: ')
-#y0 = input('введите y: ')
+x0 = input('введите x: ')
+y0 = input('введите y: ')
 fig, ax = plt.subplots()
-x0 = 6
-y0 = 8
 
-#K = float(input('Модуль всестороннего сжатия(Н/м^2): '))
-#p = float(input('Плотность жидкости(кг/м^3): '))
-K = 5
-p = 3
-N = 20
-
+K = float(input('Модуль всестороннего сжатия(Н/м^2): '))
+p = float(input('Плотность жидкости(кг/м^3): '))
 c = np.sqrt(K/p)
+interval = 100 * c
+N = 50
+
+if c <= 30:
+  c * 30 
+print(c)
 
 balls = []
-
+wave, = plt.plot([], [], '-', color='black', label='ball')
 for i in range(N):
-  ball, = plt.plot([], [], 'o', color='black', label='ball')
+  ball, = plt.plot([], [], '-', color='black', label='ball')
   balls.append(ball)
 
 plt.plot(x0, y0, color='r', marker='o')
 
-def circle_func(R, r):
+def circle_func(R, r, x0, y0):
   alpha = np.arange(0, 2*np.pi, 0.01)
   x = x0 + (R+r) * np.cos(alpha)
   y = y0 + (R+r) * np.sin(alpha)
@@ -36,25 +35,32 @@ plt.axis('equal')
 ax.set_xlim(-2*edge, 2*edge)
 ax.set_ylim(-2*edge, 2*edge)
 
-
+j = 0
+r = 0
 def animate(i):
-  for j in range(N):
-    ball = balls[j]
-    ball.set_data(circle_func(0, j+i))
-  # ball2.set_data(circle_func(i, i))
-  # ball3.set_data(circle_func(i, i+0.5))
-  # ball4.set_data(circle_func(i, i+1.5))
-  # ball5.set_data(circle_func(i, i+2))
-
+  global r, j
+  r += 1
+  ball = balls[j]
+  ball.set_data(circle_func(0, r, x0, y0))
+  j += 1
+  for k in np.arange(0, 1, 0.1):
+    wave.set_data(circle_func(0, r + k, x0, y0))
 
 ani = FuncAnimation(fig,
                     animate,
-                    frames=np.arange(0, 5, 0.01),
-                    interval = c
+                    frames=np.linspace(0, 5, N-2),
+                    interval = interval
                     )
-
 
 
 ani.save('pro1_animation.gif')
 
 
+
+
+
+#x0 = 8
+#y0 = 1
+#K = 22000000
+#p = 9970
+#N = 50
