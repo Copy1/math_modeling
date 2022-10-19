@@ -10,6 +10,4 @@ while a > 1:
             break
         else:
             b += 1
-    if b == 1:
-        continue
 print()
