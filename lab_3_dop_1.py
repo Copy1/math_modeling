@@ -4,8 +4,25 @@ import math as m
 
 N = 3
 M = 4
-A = [i, j]
-A = np.array(N, M, 1)
-A = m.sin(N * i + M * j)
-a = m.sin(N * (i+1) + M * (j + 1))
+A = np.zeros(N, M)
+for i in range(N):
+  for j in range(M):
+    print(i, j)
+    if i == 0 and j == 0:
+      A[i, j] = m.sin(N * i + M * j)
+    else:
+      A[i, j] = m.sin(N * (i+1) + M * (j + 1))
+      
 
+   
+
+
+
+
+    
+#for i in range(N):
+ # for j in range(M):
+  #  if  A[i, j] < 0:
+   #    A[i, j] = 0
+ 
+print(A)
