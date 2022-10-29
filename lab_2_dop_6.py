@@ -15,12 +15,8 @@
     #time.sleep(1)
 
 
-
 for i in range(10):
-  print()
-  for j in range(10):
-    print(j, end = ' ')
-    print()
-    print('--')
-    print( j*j, end=' ' )
-    
+   print(i)
+   for j in range(10):
+    print(
+  

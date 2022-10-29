@@ -2,9 +2,19 @@
 import numpy as np
 import math as m
 
+   
+
+
+#for i in range(N):
+ # for j in range(M):
+  #  if  A[i, j] < 0:
+   #    A[i, j] = 0
+ 
+
 N = 3
-M = 4
-A = np.zeros(N, M)
+M = 5
+A = np.zeros((N, M))
+
 for i in range(N):
   for j in range(M):
     print(i, j)
@@ -12,17 +22,9 @@ for i in range(N):
       A[i, j] = m.sin(N * i + M * j)
     else:
       A[i, j] = m.sin(N * (i+1) + M * (j + 1))
-      
 
-   
-
-
+    
+print(A)
 
 
     
-#for i in range(N):
- # for j in range(M):
-  #  if  A[i, j] < 0:
-   #    A[i, j] = 0
- 
-print(A)
