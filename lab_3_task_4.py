@@ -4,22 +4,18 @@ import math as m
 
    
 
-N = input('введите с клавиаьтуры  ')
-M = input(" введите с клавиатуры  ")
+N = 24
+M = 18
 A = np.zeros(N, M)
 
-for i in range({N}):
-  for j in range({M}):
+for i in range(N):
+  for j in range(M):
     print(i, j)
     if i == 0 and j == 0:
-      A[i, j] = m.sin({N} * i + {M} * j)
+      A[i, j] = m.sin(N * i + M * j)
     else:
-      A[i, j] = m.sin({N} * (i+1) + {M} * (j + 1))
-  if i < 0:
-        if j < 0:
-          i == 0
-          j == 0
-        
+      A[i, j] = m.sin(N * (i+1) + M * (j + 1))
+  
 
 print(A)
 
