@@ -16,7 +16,6 @@ for i in range(N):
     else:
       A[i, j] = m.sin(N * (i+1) + M * (j + 1))
   
-
 print(A)
 
 
