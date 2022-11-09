@@ -1,9 +1,9 @@
 import numpy as np 
 
-N = 6
-M = 19
+N = 5
+M = 4
 
-A = np.zero(N, M)
+A = np.zeros((N, M))
 
 for i in range(N):
   for j in range(M):
@@ -11,8 +11,12 @@ for i in range(N):
       A[i, j] = np.sin(N * i + M * j)
     else:
       A[i, j] = np.sin(N * (i + 1) + M * (j + 1))
+for i in range(N):
+  for j in range(M):
+    if A[i, j] < 0:
+      A[i, j] = 0
+print(A) 
 
-print(A) \n ptint()
 
 B = A[::, 1]
 C = A[::, 2]

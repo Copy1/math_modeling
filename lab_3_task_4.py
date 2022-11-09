@@ -4,9 +4,10 @@ import math as m
 
    
 
-N = 24
-M = 18
-A = np.zeros(N, M)
+N = 5
+M = 4
+
+A = np.zeros((N, M))
 
 for i in range(N):
   for j in range(M):
@@ -15,8 +16,11 @@ for i in range(N):
       A[i, j] = m.sin(N * i + M * j)
     else:
       A[i, j] = m.sin(N * (i+1) + M * (j + 1))
-  
+for i in range(N):
+  for j in range(M):
+    if A[i, j] < 0:
+      A[i, j] = 0
+
 print(A)
 
 
-    
