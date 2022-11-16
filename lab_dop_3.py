@@ -21,3 +21,5 @@ for i in range (0, n):
 
 maax = max(list1)
 print('наибольший элемент: ', maax)
+
+
