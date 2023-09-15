@@ -1,2 +1,4 @@
-my_st = "Пример строки Python"
-print(my_st.split())
+a = int(input())
+b = int(input())
+for i in range(a, b, 2):
+        print(i, end = '')
